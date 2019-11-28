@@ -29,7 +29,7 @@ cd backend
 # show the result
 
 <img src='https://github.com/luhaitingfeng/code-test/blob/master/frontend/public/s1.png' width="300" height="300" />
-<img src='https://github.com/luhaitingfeng/code-test/blob/master/frontend/public/s1.png' width="300" height="300" />
-<img src='https://github.com/luhaitingfeng/code-test/blob/master/frontend/public/s1.png' width="300" height="300" />
+<img src='https://github.com/luhaitingfeng/code-test/blob/master/frontend/public/s2.png' width="300" height="300" />
+<img src='https://github.com/luhaitingfeng/code-test/blob/master/frontend/public/s3.png' width="300" height="300" />
 
 
