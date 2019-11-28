@@ -15,5 +15,13 @@ import java.util.List;
  **/
 public interface WeatherService {
     List<String> findCityList();
+
+    /**
+     * <a href="https://rapidapi.com/community/api/open-weather-map/endpoints">api website</a>
+     * <p>Notice that the api limits 100 times a day, 10 times per min</p>
+     * @param weatherInput
+     * @return
+     * @throws IOException
+     */
     WeatherOutput findCurrentCityWeather(WeatherInput weatherInput) throws IOException;
 }

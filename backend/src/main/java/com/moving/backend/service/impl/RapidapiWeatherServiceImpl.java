@@ -62,7 +62,7 @@ public class RapidapiWeatherServiceImpl implements WeatherService {
 
             WeatherOutput weatherOutput = new WeatherOutput();
             if(weatherDataOutput!= null){
-                weatherOutput.setCity(weatherDataOutput.getName());
+                weatherOutput.setCity(weatherInput.getCity());
                 weatherOutput.setWeather(weatherDataOutput.getWeather().get(0).getDescription());
                 weatherOutput.setTemperature(weatherDataOutput.getMain().getTemp());
                 weatherOutput.setWind(weatherDataOutput.getWind().getSpeed());
@@ -79,7 +79,7 @@ public class RapidapiWeatherServiceImpl implements WeatherService {
             weatherOutput.setTemperature("23");
             weatherOutput.setWeather("fine");
             weatherOutput.setWind("20");
-            weatherOutput.setUpdateTime("2019-11-11 11:11:11");
+            weatherOutput.setUpdateTime(LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")));
 
             return weatherOutput;
         }

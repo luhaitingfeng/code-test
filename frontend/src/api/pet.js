@@ -1,11 +1,11 @@
 import axios from 'axios'
-
-let petListApi = "api/petList";
+import {baseUrl} from '@/const/urlconfig'
 
 export const petList = (data) => {
     return axios.request({
-        url: '/api/petList',
+        baseURL:baseUrl,
+        url: '/api/petList.backend',
         data,
-        method: 'post'
+        method: 'get'
     })
 }

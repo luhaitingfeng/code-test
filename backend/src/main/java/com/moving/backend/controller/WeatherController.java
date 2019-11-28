@@ -5,6 +5,7 @@ import com.moving.backend.pojo.weather.WeatherInput;
 import com.moving.backend.pojo.weather.WeatherOutput;
 import com.moving.backend.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,7 +26,7 @@ public class WeatherController {
     @Autowired
     private WeatherService weatherService;
 
-    @PostMapping("/api/cities.backend")
+    @GetMapping("/api/cities.backend")
     public ResponseOutput<List<String>> cities()  {
         List<String> cityList = weatherService.findCityList();
         return ResponseOutput.ok(cityList);
