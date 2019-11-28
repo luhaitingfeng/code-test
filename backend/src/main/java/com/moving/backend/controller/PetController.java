@@ -1,6 +1,14 @@
 package com.moving.backend.controller;
 
-import org.springframework.stereotype.Controller;
+import com.moving.backend.pojo.PetListGroupOutput;
+import com.moving.backend.pojo.ResponseOutput;
+import com.moving.backend.service.PetService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * <h3>com.moving.backend.controller</h3>
@@ -9,8 +17,22 @@ import org.springframework.stereotype.Controller;
  * @author : Luhaitingfeng
  * @date : 2019-11-28 15:11
  **/
-@Controller
+@RestController
 public class PetController {
 
+    @Autowired
+    private PetService petService;
+
+    @GetMapping("test")
+    public String test(){
+        return "ok";
+    }
+
+    @RequestMapping("/api/petList.backend")
+    public ResponseOutput petList()  {
+
+        List<PetListGroupOutput> petListGroupOutputs = petService.petList();
+        return ResponseOutput.ok(petListGroupOutputs);
+    }
 
 }
