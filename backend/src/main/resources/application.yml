@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    root: info
+
+custom:
+  backend:
+    rapidapiWeather:
+      cities: Sydney,Melbourne,Wollongong
+      host: community-open-weather-map.p.rapidapi.com
+      key: f389bae872msh40231f5c1dd1206p1e1f9ejsn8f958bc986f2
+      url: https://community-open-weather-map.p.rapidapi.com/weather?callback=test&id=2172797&units=metric

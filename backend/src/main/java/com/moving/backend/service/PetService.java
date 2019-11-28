@@ -1,7 +1,6 @@
 package com.moving.backend.service;
 
-import com.moving.backend.pojo.PetListGroupOutput;
-import com.moving.backend.pojo.PetListOutput;
+import com.moving.backend.pojo.pet.PetListGroupOutput;
 
 import java.util.List;
 

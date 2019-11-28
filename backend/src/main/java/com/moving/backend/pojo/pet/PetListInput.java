@@ -1,4 +1,4 @@
-package com.moving.backend.pojo;
+package com.moving.backend.pojo.pet;
 
 /**
  * <h3>com.moving.backend.pojo</h3>

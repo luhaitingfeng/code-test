@@ -1,11 +1,10 @@
 package com.moving.backend.controller;
 
-import com.moving.backend.pojo.PetListGroupOutput;
+import com.moving.backend.pojo.pet.PetListGroupOutput;
 import com.moving.backend.pojo.ResponseOutput;
 import com.moving.backend.service.PetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -28,8 +27,8 @@ public class PetController {
         return "ok";
     }
 
-    @RequestMapping("/api/petList.backend")
-    public ResponseOutput petList()  {
+    @GetMapping("/api/petList.backend")
+    public ResponseOutput<List<PetListGroupOutput>> petList()  {
 
         List<PetListGroupOutput> petListGroupOutputs = petService.petList();
         return ResponseOutput.ok(petListGroupOutputs);

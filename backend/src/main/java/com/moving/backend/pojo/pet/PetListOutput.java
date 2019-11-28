@@ -1,4 +1,4 @@
-package com.moving.backend.pojo;
+package com.moving.backend.pojo.pet;
 
 import java.util.List;
 

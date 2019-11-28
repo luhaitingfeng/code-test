@@ -1,8 +1,8 @@
 package com.moving.backend.service.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.moving.backend.pojo.PetListGroupOutput;
-import com.moving.backend.pojo.PetListOutput;
+import com.moving.backend.pojo.pet.PetListGroupOutput;
+import com.moving.backend.pojo.pet.PetListOutput;
 import com.moving.backend.service.PetService;
 import com.moving.backend.util.UtilHttpClient;
 import org.springframework.http.ResponseEntity;
