@@ -21,6 +21,8 @@ jobs:
         FTP_SERVER: 152.136.151.72
         FTP_USERNAME: root
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        METHOD: sftp
+        PORT: 22
         LOCAL_DIR: /home/runner/work/code-test/code-test/backend/target
         REMOTE_DIR: /opt/server/code-test
         ARGS: --delete
