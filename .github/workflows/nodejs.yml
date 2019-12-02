@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -25,3 +25,14 @@ jobs:
       working-directory: ./frontend
       env:
         CI: true
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      env:
+        FTP_SERVER: 152.136.151.72
+        FTP_USERNAME: root
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        METHOD: sftp
+        PORT: 22
+        LOCAL_DIR: ./frontend/dist
+        REMOTE_DIR: /opt/server/nginx/html
+        ARGS: --delete  
