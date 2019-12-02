@@ -26,6 +26,8 @@ cd backend
 
 ```
 
+## Have a quicklook at http://152.136.151.72/
+
 # show the result
 
 <img src='https://github.com/luhaitingfeng/code-test/blob/master/frontend/public/s1.png' width="300" height="300" />
